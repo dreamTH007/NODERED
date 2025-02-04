@@ -5,6 +5,7 @@
 
 // Run this file with node CRUDBookSQLite.js
 // Test with Postman
+require("dotenv").config();
 
 const express = require('express');
 const sqlite3 = require('sqlite3');
@@ -82,4 +83,4 @@ app.delete('/books/:id', (req, res) => {
   });
   
   const port = process.env.PORT || 3000;
-  app.listen(port, () => console.log(`Listening on port ${port}...`));
+  app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
